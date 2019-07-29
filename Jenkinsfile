@@ -13,9 +13,9 @@ pipeline {
                 '''
             }
         }
-        stage ('compile') {
+        stage ('build') {
             steps {
-                    bat 'mvn clean install'
+                    bat 'mvn install'
             }
         }
         stage ('Docker-Build') {
